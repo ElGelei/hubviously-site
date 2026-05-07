@@ -695,6 +695,54 @@ section.alt { background: #fff; }
 .legal a { color: var(--primary); }
 .legal a:hover { text-decoration: underline; }
 
+/* ---------- Termly legal pages (privacy, cookies) ---------- */
+.legal-termly {
+  background: #fff;
+  min-height: calc(100vh - 64px);
+  padding: 80px 0 120px;
+}
+.legal-termly-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+/* Reset and re-style headings inside Termly content so they match the rest of the site */
+.legal-termly-inner h1 {
+  font-size: clamp(32px, 4vw, 44px);
+  letter-spacing: -0.03em;
+  margin: 0 0 8px;
+}
+.legal-termly-inner h2 {
+  font-size: 22px;
+  letter-spacing: -0.018em;
+  margin: 40px 0 12px;
+  font-weight: 600;
+}
+.legal-termly-inner h3 {
+  font-size: 18px;
+  letter-spacing: -0.015em;
+  margin: 24px 0 8px;
+  font-weight: 600;
+}
+.legal-termly-inner table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.legal-termly-inner table th,
+.legal-termly-inner table td {
+  padding: 8px 12px;
+  vertical-align: top;
+}
+.legal-termly-inner ul,
+.legal-termly-inner ol {
+  padding-left: 24px;
+}
+.legal-termly-inner [data-custom-class="body_text"] {
+  line-height: 1.6;
+}
+
 /* ---------- Contact page ---------- */
 .contact-wrap {
   background: #fff;

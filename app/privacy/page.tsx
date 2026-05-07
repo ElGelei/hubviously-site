@@ -2,12 +2,19 @@ import type { Metadata } from "next";
 import { privacyHtml } from "../_lib/content";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy — Hubviously",
   description:
-    "How Hubviously collects, uses and protects HubSpot portal metadata. EU storage, GDPR rights, no model training on your data.",
-  alternates: { canonical: "/privacy" },
+    "How Hubviously collects, processes, and protects personal information of HubSpot administrators using our service.",
+  alternates: { canonical: "https://hubviously.com/privacy" },
 };
 
 export default function PrivacyPage() {
-  return <div dangerouslySetInnerHTML={{ __html: privacyHtml }} />;
+  return (
+    <main className="legal-termly">
+      <div
+        className="legal-termly-inner"
+        dangerouslySetInnerHTML={{ __html: privacyHtml }}
+      />
+    </main>
+  );
 }
