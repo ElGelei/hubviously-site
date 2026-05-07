@@ -145,6 +145,7 @@ export default function RootLayout({
                   <li><a href="/privacy">Privacy</a></li>
                   <li><a href="/cookies">Cookies</a></li>
                   <li><a href="/terms">Terms</a></li>
+                  <li><a href="/mentions-legales">Mentions Légales</a></li>
                 </ul>
               </div>
             </div>
