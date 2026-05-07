@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const SITE_URL = "https://hubviously.com";
@@ -61,6 +62,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {/*
+          Termly Cookie Consent + auto-blocker. Must load BEFORE any tracking
+          scripts (HubSpot Meetings, HubSpot Forms) so it can intercept their
+          cookies until the user gives consent. Hence beforeInteractive — and
+          per Next.js 16, beforeInteractive scripts must be declared in the
+          root layout.
+        */}
+        <Script
+          id="termly-banner"
+          src="https://app.termly.io/resource-blocker/5ce27664-3325-4eb9-9f1a-73283d39d002?autoBlock=on"
+          strategy="beforeInteractive"
+        />
         <header className="nav" id="nav">
           <div className="nav-inner">
             <a href="/" className="brand">
