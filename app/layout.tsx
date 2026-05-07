@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import "./globals.css";
 
 const SITE_URL = "https://hubviously.com";
@@ -61,19 +60,19 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
+      <head>
         {/*
-          Termly Cookie Consent + auto-blocker. Must load BEFORE any tracking
-          scripts (HubSpot Meetings, HubSpot Forms) so it can intercept their
-          cookies until the user gives consent. Hence beforeInteractive — and
-          per Next.js 16, beforeInteractive scripts must be declared in the
-          root layout.
+          Termly Cookie Consent + auto-blocker. Plain <script> with no async/defer
+          so it loads synchronously and is the FIRST <script> on the page. Termly
+          requires this to intercept downstream tracking scripts (HubSpot Meetings
+          and Forms on /contact) before they can set cookies. Using next/script
+          with strategy="beforeInteractive" produced a React #418 hydration mismatch
+          and a "ResourceBlocker is not the first script on the page" warning, so
+          we render the script tag directly.
         */}
-        <Script
-          id="termly-banner"
-          src="https://app.termly.io/resource-blocker/5ce27664-3325-4eb9-9f1a-73283d39d002?autoBlock=on"
-          strategy="beforeInteractive"
-        />
+        <script src="https://app.termly.io/resource-blocker/5ce27664-3325-4eb9-9f1a-73283d39d002?autoBlock=on" />
+      </head>
+      <body>
         <header className="nav" id="nav">
           <div className="nav-inner">
             <a href="/" className="brand">
