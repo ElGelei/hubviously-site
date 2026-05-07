@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const SITE_URL = "https://hubviously.com";
@@ -60,19 +61,23 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        {/*
-          Termly Cookie Consent + auto-blocker. Plain <script> with no async/defer
-          so it loads synchronously and is the FIRST <script> on the page. Termly
-          requires this to intercept downstream tracking scripts (HubSpot Meetings
-          and Forms on /contact) before they can set cookies. Using next/script
-          with strategy="beforeInteractive" produced a React #418 hydration mismatch
-          and a "ResourceBlocker is not the first script on the page" warning, so
-          we render the script tag directly.
-        */}
-        <script src="https://app.termly.io/resource-blocker/5ce27664-3325-4eb9-9f1a-73283d39d002?autoBlock=on" />
-      </head>
       <body>
+        {/*
+          Termly Cookie Consent + auto-blocker. Loaded via next/script with
+          strategy="afterInteractive" so it runs after React 19 hydration —
+          this avoids the React #418 hydration mismatch we hit with
+          beforeInteractive, and the raw blocking <script> in <head> we tried
+          afterwards. Because Termly is declared in the root layout (which
+          renders before page modules), it executes before the HubSpot
+          Meetings and Forms scripts on /contact, so its autoBlocker installs
+          its document.cookie / localStorage / fetch / XHR overrides in time
+          to intercept HubSpot's tracking cookies.
+        */}
+        <Script
+          id="termly-banner"
+          src="https://app.termly.io/resource-blocker/5ce27664-3325-4eb9-9f1a-73283d39d002?autoBlock=on"
+          strategy="afterInteractive"
+        />
         <header className="nav" id="nav">
           <div className="nav-inner">
             <a href="/" className="brand">
