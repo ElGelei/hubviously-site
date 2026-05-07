@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { cookiesHtml } from "../_lib/content";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy — Hubviously",
+  title: { absolute: "Cookie Policy — Hubviously" },
   description:
     "Information about cookies and tracking technologies used on hubviously.com and how to manage your preferences.",
   alternates: { canonical: "https://hubviously.com/cookies" },

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { privacyHtml } from "../_lib/content";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Hubviously",
+  title: { absolute: "Privacy Policy — Hubviously" },
   description:
     "How Hubviously collects, processes, and protects personal information of HubSpot administrators using our service.",
   alternates: { canonical: "https://hubviously.com/privacy" },
