@@ -344,6 +344,31 @@ section.alt { background: #fff; }
   color: var(--text-faint);
 }
 
+/* ---------- Two ways to work ---------- */
+.ways-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+}
+.way-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex; flex-direction: column; gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.way-card h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.018em; }
+.way-card p { margin: 0; color: var(--text-muted); font-size: 15px; }
+.way-vis {
+  margin-top: auto;
+  height: 150px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fbfbfd 0%, #f4f5f8 100%);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.ways-cta { display: flex; justify-content: center; margin-top: 36px; }
+
 /* ---------- Features ---------- */
 .feat-grid {
   display: grid;
@@ -813,7 +838,7 @@ section.alt { background: #fff; }
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   :root { --section-py: 80px; }
-  .problem-grid, .steps, .pricing { grid-template-columns: 1fr; }
+  .problem-grid, .steps, .pricing, .ways-grid { grid-template-columns: 1fr; }
   .feat, .feat.span-3 { grid-column: span 6; }
   .proof { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
