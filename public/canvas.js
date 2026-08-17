@@ -39,7 +39,7 @@
  <span style="padding:4px 10px;">Inactive</span>
  <span style="padding:4px 10px;">Deleted</span>
  <span style="margin-left:14px; padding:4px 10px;">Objects ▾</span>
- <span style="margin-left:6px; padding:4px 10px; background:rgba(232,80,26,.12); color:#ff8a5c; border-radius:5px;">⚠ 2 Cycles</span>
+ <span style="margin-left:6px; padding:4px 10px; background:rgba(232,80,26,.12); color:#ff8a5c; border-radius:5px;">⚠ 2 Risks</span>
  <span style="margin-left:6px; padding:4px 10px;">Hide isolated</span>
  <span style="margin-left:6px; padding:4px 10px;">≡ Advanced filters</span>
  </div>
@@ -80,7 +80,7 @@
  return items.map(([c,l]) => `<span><span style="width:8px;height:8px;display:inline-block;background:${c};border-radius:2px;margin-right:5px;vertical-align:middle;"></span>${l}</span>`).join('') +
  `<span style="margin-left:10px;color:rgba(255,255,255,.35);">--- Suppression risk</span>` +
  `<span style="margin-left:10px;color:rgba(255,255,255,.35);">Prop → list trigger</span>` +
- `<span style="margin-left:10px; padding:3px 8px; background:rgba(232,80,26,.18); color:#ff8a5c; border-radius:4px;">⚠ 2 WFs in cycle</span>`;
+ `<span style="margin-left:10px; padding:3px 8px; background:rgba(232,80,26,.18); color:#ff8a5c; border-radius:4px;">⚠ 2 WFs at risk</span>`;
  }
 
  function miniDots() {

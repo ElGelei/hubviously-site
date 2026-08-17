@@ -419,17 +419,24 @@ section.alt { background: #fff; }
   font-weight: 600;
   padding: 5px 9px;
   border-radius: 5px;
-  background: rgba(232,80,26,.18);
-  color: #ff8a5c;
-  border: 1px solid rgba(232,80,26,.4);
+  background: rgba(232,80,26,.10);
+  color: var(--primary);
+  border: 1px solid rgba(232,80,26,.32);
   margin-bottom: 14px;
   align-self: flex-start;
 }
+/* Same badge on the dark featured card. */
+.plan.featured .plan-launch-badge {
+  background: rgba(232,80,26,.18);
+  color: #ff8a5c;
+  border-color: rgba(232,80,26,.4);
+}
 .plan-launch-badge .pulse {
-  width: 6px; height: 6px; border-radius: 50%; background: #ff8a5c;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--primary);
   box-shadow: 0 0 0 0 rgba(255,138,92,.5);
   animation: pulse 1.8s ease-out infinite;
 }
+.plan.featured .plan-launch-badge .pulse { background: #ff8a5c; }
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(255,138,92,.6); }
   70% { box-shadow: 0 0 0 6px rgba(255,138,92,0); }
@@ -437,16 +444,25 @@ section.alt { background: #fff; }
 }
 .plan-price-was {
   text-decoration: line-through;
-  color: rgba(255,255,255,.45);
+  color: var(--text-faint);
   font-weight: 500;
   margin-right: 4px;
 }
+.plan.featured .plan-price-was { color: rgba(255,255,255,.45); }
 .plan-price-note {
   font-size: 12px;
-  color: rgba(255,255,255,.55);
+  color: var(--text-muted);
   margin: 6px 0 0;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   letter-spacing:.01em;
+}
+.plan.featured .plan-price-note { color: rgba(255,255,255,.55); }
+.pricing-vat-note {
+  margin: 22px 0 0;
+  text-align: center;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--text-faint);
 }
 .plan-tagline {
   margin: 8px 0 24px;

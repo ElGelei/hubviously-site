@@ -5,7 +5,7 @@ import "./globals.css";
 const SITE_URL = "https://hubviously.com";
 const SITE_TITLE = "Hubviously — Untangle your HubSpot portal";
 const SITE_DESCRIPTION =
-  "Map every workflow, property and list in your HubSpot portal into an interactive dependency graph. Spot loops, risks and hidden connections in seconds.";
+  "Map every workflow, property and list in your HubSpot portal into an interactive dependency graph. Spot risks, cascades and hidden connections in seconds.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -97,10 +97,16 @@ export default function RootLayout({
               <a href="/contact">Contact</a>
             </nav>
             <div className="nav-cta">
-              <a href="https://app.hubviously.com" className="btn btn-ghost btn-sm">
+              <a
+                href="https://app.hubviously.com/login"
+                className="btn btn-ghost btn-sm"
+              >
                 Sign in
               </a>
-              <a href="/#cta" className="btn btn-primary btn-sm">
+              <a
+                href="https://app.hubviously.com/signup"
+                className="btn btn-primary btn-sm"
+              >
                 Connect free
               </a>
             </div>
