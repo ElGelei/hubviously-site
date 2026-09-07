@@ -278,6 +278,11 @@ section.alt { background: #fff; }
   border-bottom: none;
   background: #14142a;
 }
+.hero-canvas img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* ---------- Problem cards ---------- */
 .problem-grid {
