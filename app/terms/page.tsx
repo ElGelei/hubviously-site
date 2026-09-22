@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { termsHtml } from "../_lib/content";
 
 export const metadata: Metadata = {
-  title: { absolute: "Terms of Service — Hubviously" },
+  title: { absolute: "Terms of Service — Untanggy" },
   description:
-    "Terms governing the use of the Hubviously service for HubSpot administrators and RevOps teams.",
+    "Terms governing the use of the Untanggy service for HubSpot administrators and RevOps teams.",
   alternates: { canonical: "https://hubviously.com/terms" },
 };
 

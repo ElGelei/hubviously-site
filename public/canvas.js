@@ -1,4 +1,4 @@
-// Hubviously programmatic canvas mockups
+// Untanggy programmatic canvas mockups
 // Builds an original "workflow dependency graph" visual.
 // We never use any HubSpot brand or distinctive UI; this is our own canvas product.
 
@@ -19,7 +19,7 @@
  <button style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:6px;color:rgba(255,255,255,.7);font:500 12px 'JetBrains Mono',monospace;">
  ← Dashboard
  </button>
- <span style="margin-left:14px;font-weight:600;font-size:13px;color:#fff;">Hubviously</span>
+ <span style="margin-left:14px;font-weight:600;font-size:13px;color:#fff;">Untanggy</span>
  <span style="margin-left:8px;font:500 12px 'JetBrains Mono',monospace;color:rgba(255,255,255,.45);">hs-simple.com</span>
  <div style="margin-left:auto;display:flex;align-items:center;gap:14px;font:500 12px 'JetBrains Mono',monospace;color:rgba(255,255,255,.55);">
  <span><span style="width:6px;height:6px;display:inline-block;background:#7c5cff;border-radius:50%;margin-right:6px;"></span>53 Workflows</span>

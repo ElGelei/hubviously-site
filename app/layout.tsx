@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const SITE_URL = "https://hubviously.com";
-const SITE_TITLE = "Hubviously — Untangle your HubSpot portal";
+const SITE_TITLE = "Untanggy — Untangle your HubSpot portal";
 const SITE_DESCRIPTION =
   "Map every workflow, property and list in your HubSpot portal into an interactive dependency graph. Spot risks, cascades and hidden connections in seconds.";
 
@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s — Hubviously",
+    template: "%s — Untanggy",
   },
   description: SITE_DESCRIPTION,
-  applicationName: "Hubviously",
-  authors: [{ name: "Hubviously" }],
+  applicationName: "Untanggy",
+  authors: [{ name: "Untanggy" }],
   keywords: [
     "HubSpot",
     "workflows",
@@ -30,17 +30,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "Hubviously",
+    siteName: "Untanggy",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    // TODO: add public/og.png (1200×630) and uncomment the images entry below
-    // images: [{ url: "/og.png", width: 1200, height: 630, alt: "Hubviously" }],
+    // og:image / twitter:image tags come from the app/opengraph-image.tsx and
+    // app/twitter-image.tsx file conventions (1200×630, generated at build).
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    // images: ["/og.png"],
   },
   robots: {
     index: true,
@@ -83,11 +82,11 @@ export default function RootLayout({
             <a href="/" className="brand">
               <span className="brand-mark">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo-mark.png" alt="Hubviously" />
+                <img src="/logo-mark.png" alt="Untanggy" />
               </span>
               <span className="brand-word">
-                <span className="hub">Hub</span>
-                <span className="viously">viously</span>
+                <span className="un">Un</span>
+                <span className="tanggy">tanggy</span>
               </span>
             </a>
             <nav className="nav-links">
@@ -122,11 +121,11 @@ export default function RootLayout({
                 <a href="/" className="brand" style={{ color: "#fff" }}>
                   <span className="brand-mark">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/logo-mark.png" alt="Hubviously" />
+                    <img src="/logo-mark.png" alt="Untanggy" />
                   </span>
                   <span className="brand-word">
-                    <span className="hub">Hub</span>
-                    <span className="viously">viously</span>
+                    <span className="un">Un</span>
+                    <span className="tanggy">tanggy</span>
                   </span>
                 </a>
                 <p>See how your HubSpot workflows actually connect.</p>
@@ -157,7 +156,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="footer-bot">
-              <span>© 2026 Hubviously. Made for HubSpot admins.</span>
+              <span>© 2026 Untanggy. Made for HubSpot admins.</span>
               <span>Not affiliated with HubSpot, Inc.</span>
             </div>
           </div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { mentionsLegalesHtml } from "../_lib/content";
 
 export const metadata: Metadata = {
-  title: { absolute: "Mentions Légales — Hubviously" },
+  title: { absolute: "Mentions Légales — Untanggy" },
   description:
     "Informations légales relatives au site hubviously.com, éditeur HS Simple SASU.",
   alternates: { canonical: "https://hubviously.com/mentions-legales" },

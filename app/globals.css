@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
-/* Hubviously brand tokens exposed as Tailwind theme tokens (v4 CSS-first) */
+/* Untanggy brand tokens exposed as Tailwind theme tokens (v4 CSS-first) */
 @theme {
   --color-primary: #E8501A;
   --color-primary-hover: #d44715;
@@ -24,7 +24,7 @@
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
-/* ---------- Hubviously shared marketing styles (preserved from design) ---------- */
+/* ---------- Untanggy shared marketing styles (preserved from design) ---------- */
 :root {
   --primary: #E8501A;
   --primary-hover: #d44715;
@@ -108,10 +108,10 @@ button { font: inherit; cursor: pointer; }
   display: inline-grid; place-items: center;
 }
 .brand-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.brand-word .hub { color: var(--primary); }
-.brand-word .viously { color: var(--text); }
-.nav.dark .brand-word .viously,
-.footer .brand-word .viously { color: #ffffff; }
+.brand-word .un { color: var(--text); }
+.brand-word .tanggy { color: var(--primary); }
+.nav.dark .brand-word .un,
+.footer .brand-word .un { color: #ffffff; }
 .nav-links {
   display: flex; align-items: center; gap: 28px;
   font-size: 14px; color: var(--text-muted);
