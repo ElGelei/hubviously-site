@@ -53,7 +53,7 @@ export default function GettingStartedPage() {
         <h2>Need help?</h2>
         <p>
           Write to us at{" "}
-          <a href="mailto:hello@hubviously.com">hello@hubviously.com</a> and we
+          <a href="mailto:hello@untanggy.com">hello@untanggy.com</a> and we
           will get you unstuck.
         </p>
       </div>

@@ -34,7 +34,8 @@ repo. Update the business name there, regenerate, and replace the constants in
 ## Deferred to later lots (unchanged in this one, by design)
 
 - Domain: `SITE_URL`, canonicals, robots/sitemap, `app.hubviously.com` links
-  (9), `hello@hubviously.com` mailtos (35).
+  (9). (`hello@hubviously.com` mailtos are done — all now `hello@untanggy.com`,
+  old address forwards.)
 - HubSpot Meetings slugs `gbolnot/demo-hubviously` and `gbolnot/hubviously`
   (operator will create new slugs later, then update the two references in
   `content.ts`).
