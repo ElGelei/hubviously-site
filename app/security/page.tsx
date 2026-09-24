@@ -144,13 +144,23 @@ export default function SecurityPage() {
           Deleting an account does the same for every portal, then deletes the
           account.
         </p>
-        <p>We do not keep database backups beyond the live database.</p>
+        <p>
+          We do not keep database backups beyond the live database. Data held
+          by sub-processors after deletion (billing records at Stripe,
+          delivered emails at Resend, application logs at Vercel and Supabase,
+          sync state at Inngest for 24 hours) expires under each
+          provider&rsquo;s retention period.
+        </p>
 
         <h2>5. Retention</h2>
         <p>
           Portal data is kept only while the portal is connected. We keep sync
           timestamps per organisation for rate limiting; they contain no portal
           content.
+        </p>
+        <p>
+          Application logs may contain the sign-in email of an Untanggy user
+          and the name of a connected portal; we are removing these from logs.
         </p>
 
         <h2>6. Access</h2>

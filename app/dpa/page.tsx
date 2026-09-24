@@ -53,16 +53,44 @@ export default function DpaPage() {
 
         <h2>4. Categories of personal data</h2>
         <ul>
-          <li>Names and email addresses of the customer&rsquo;s HubSpot users.</li>
-          <li>Names and email addresses of the customer&rsquo;s Untanggy users.</li>
-          <li>HubSpot contact ids received through the deletion webhook.</li>
+          <li>
+            Names and email addresses of the customer&rsquo;s HubSpot users,
+            as shown on workflows they created or last edited.
+          </li>
+          <li>
+            Names and email addresses of the customer&rsquo;s Untanggy users,
+            and of people they invite.
+          </li>
+          <li>
+            The customer&rsquo;s organisation name, and the name of the
+            connected portal, which may be a person&rsquo;s name on a personal
+            portal.
+          </li>
+          <li>
+            Personal data the customer&rsquo;s users may have written into the
+            names of workflows, lists, properties, forms, emails or other
+            assets.
+          </li>
+          <li>
+            HubSpot contact ids received through the deletion webhook, which
+            are logged and not stored.
+          </li>
+          <li>Billing name and email, held by Stripe.</li>
+          <li>
+            Technical logs (sign-in events, IP addresses in authentication logs
+            kept by Supabase) retained for security.
+          </li>
         </ul>
 
         <h2>5. Categories of data subjects</h2>
         <ul>
           <li>
             The customer&rsquo;s employees and contractors who use HubSpot or
-            Untanggy.
+            Untanggy, and people they invite to Untanggy.
+          </li>
+          <li>
+            Any person whose name appears in the customer&rsquo;s organisation
+            name, portal name or asset names.
           </li>
           <li>Contacts, by id only.</li>
         </ul>
