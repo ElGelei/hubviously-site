@@ -48,7 +48,7 @@ const SCOPES: { scope: string; kind: "Required" | "Optional" }[] = [
 
 const SUBPROCESSORS = [
   { name: "Supabase", purpose: "Database and authentication", data: "All customer data", location: "EU (Ireland)" },
-  { name: "Vercel", purpose: "Hosting and application functions", data: "All customer data in transit", location: "EU (Dublin) for functions" },
+  { name: "Vercel", purpose: "Hosting and application functions", data: "All customer data in transit; application logs (may include sign-in emails and portal names, being removed)", location: "EU (Dublin) for functions" },
   { name: "Inngest", purpose: "Job orchestration", data: "Sync execution state as described in section 2, kept 24 hours", location: "United States" },
   { name: "Resend", purpose: "Transactional email", data: "Account email addresses", location: "EU" },
   { name: "Stripe", purpose: "Billing", data: "Billing contact and payment data, no HubSpot data", location: "Ireland and United States" },
@@ -168,8 +168,6 @@ export default function SecurityPage() {
           Untanggy is operated by a single founder (HS Simple SASU). No third
           party has human access to customer data.
         </p>
-        {/* TODO(operator): delete the paragraph below if MFA is not enabled
-            on every administrative account. */}
         <p>
           All administrative accounts are protected by multi-factor
           authentication.
