@@ -789,6 +789,37 @@ section.alt { background: #fff; }
   line-height: 1.6;
 }
 
+/* ---------- Trust pages (security, dpa) ---------- */
+.trust p, .trust li { line-height: 1.7; }
+.trust p, .trust ul { margin: 0 0 16px; }
+.trust ul { list-style: disc; }
+.trust-table-wrap {
+  overflow-x: auto;
+  margin: 12px 0 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.trust .trust-table { margin: 0; }
+.trust-table th {
+  text-align: left;
+  font-weight: 600;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.trust-table td { border-bottom: 1px solid var(--border); }
+.trust-table tr:last-child td { border-bottom: 0; }
+.trust-table code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.trust-updated {
+  margin-top: 56px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-faint);
+}
+
 /* ---------- Contact page ---------- */
 .contact-wrap {
   background: #fff;
