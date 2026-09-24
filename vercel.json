@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path((?!email/logo-mark\\.png$).*)",
+      "has": [{ "type": "host", "value": "hubviously.com" }],
+      "destination": "https://untanggy.com/:path",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!email/logo-mark\\.png$).*)",
+      "has": [{ "type": "host", "value": "www.hubviously.com" }],
+      "destination": "https://untanggy.com/:path",
+      "permanent": true
+    }
+  ]
+}

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: { absolute: "Terms of Service — Untanggy" },
   description:
     "Terms governing the use of the Untanggy service for HubSpot administrators and RevOps teams.",
-  alternates: { canonical: "https://hubviously.com/terms" },
+  alternates: { canonical: "https://untanggy.com/terms" },
 };
 
 export default function TermsPage() {

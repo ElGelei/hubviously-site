@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://hubviously.com/sitemap.xml
+Sitemap: https://untanggy.com/sitemap.xml

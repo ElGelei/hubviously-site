@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 
-const SITE_URL = "https://hubviously.com";
+const SITE_URL = "https://untanggy.com";
 const SITE_TITLE = "Untanggy — Untangle your HubSpot portal";
 const SITE_DESCRIPTION =
   "Map every workflow, property and list in your HubSpot portal into an interactive dependency graph. Spot risks, cascades and hidden connections in seconds.";
@@ -97,13 +97,13 @@ export default function RootLayout({
             </nav>
             <div className="nav-cta">
               <a
-                href="https://app.hubviously.com/login"
+                href="https://app.untanggy.com/login"
                 className="btn btn-ghost btn-sm"
               >
                 Sign in
               </a>
               <a
-                href="https://app.hubviously.com/signup"
+                href="https://app.untanggy.com/signup"
                 className="btn btn-primary btn-sm"
               >
                 Connect free

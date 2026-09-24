@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Getting started",
   description:
     "Connect your HubSpot portal, run your first sync, and explore the dependency map. A five minute guide to getting value from Untanggy.",
-  alternates: { canonical: "https://hubviously.com/getting-started" },
+  alternates: { canonical: "https://untanggy.com/getting-started" },
 };
 
 export default function GettingStartedPage() {
@@ -20,7 +20,7 @@ export default function GettingStartedPage() {
         <h2>1. Connect your portal</h2>
         <p>
           Sign up at{" "}
-          <a href="https://app.hubviously.com/signup">app.hubviously.com/signup</a>,
+          <a href="https://app.untanggy.com/signup">app.untanggy.com/signup</a>,
           then click &ldquo;Connect portal&rdquo;. Approve the HubSpot
           permissions when prompted: access is read-only, and Untanggy never
           modifies your portal. Finally, pick the account you want to connect.
