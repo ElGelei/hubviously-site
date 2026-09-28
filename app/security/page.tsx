@@ -42,8 +42,6 @@ const SCOPES: { scope: string; kind: "Required" | "Optional" }[] = [
   { scope: "content", kind: "Optional" },
   { scope: "crm.schemas.projects.read", kind: "Optional" },
   { scope: "crm.schemas.appointments.read", kind: "Optional" },
-  { scope: "crm.objects.goals.read", kind: "Optional" },
-  { scope: "crm.objects.feedback_submissions.read", kind: "Optional" },
 ];
 
 const SUBPROCESSORS = [
@@ -72,7 +70,7 @@ export default function SecurityPage() {
           workflow.
         </p>
         <p>
-          Access is read-only OAuth, with 21 scopes, listed in the table below.
+          Access is read-only OAuth, with 19 scopes, listed in the table below.
         </p>
         <p>
           HubSpot offers no read-only version of the automation, forms and
