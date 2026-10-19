@@ -7,6 +7,28 @@ const SITE_TITLE = "Untanggy — Untangle your HubSpot portal";
 const SITE_DESCRIPTION =
   "Map every workflow, property and list in your HubSpot portal into an interactive dependency graph. Spot risks, cascades and hidden connections in seconds.";
 
+// First-touch attribution. Runs inline on every page load, before Termly and
+// before hydration. If the utg_attr cookie already exists it is left alone, so
+// the first visit wins for 90 days. Otherwise it stores the utm_* params, the
+// referrer and the landing path as URL-encoded JSON on .untanggy.com, where
+// app.untanggy.com can read it at signup. On any other host (localhost,
+// previews) the cookie is written without a domain so the script stays
+// testable. Links to the app carry nothing extra: the cookie does the job.
+const ATTRIBUTION_SCRIPT = `(function(){try{
+var n="utg_attr";
+if(document.cookie.split("; ").some(function(c){return c.indexOf(n+"=")===0;}))return;
+var q=new URLSearchParams(location.search),d={};
+["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(function(k){d[k]=q.get(k)||"";});
+var own=/(^|\.)untanggy\.com$/,r=document.referrer||"";
+try{if(r&&own.test(new URL(r).hostname))r="";}catch(e){}
+d.referrer=r;
+d.landing_path=location.pathname;
+d.first_touch_at=new Date().toISOString();
+var c=n+"="+encodeURIComponent(JSON.stringify(d))+"; max-age=7776000; path=/; SameSite=Lax; Secure";
+if(own.test(location.hostname))c+="; domain=.untanggy.com";
+document.cookie=c;
+}catch(e){}})();`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -61,6 +83,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          id="utg-attribution"
+          dangerouslySetInnerHTML={{ __html: ATTRIBUTION_SCRIPT }}
+        />
         {/*
           Termly Cookie Consent + auto-blocker. Loaded via next/script with
           strategy="afterInteractive" so it runs after React 19 hydration —
