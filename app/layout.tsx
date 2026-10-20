@@ -189,6 +189,14 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+
+        {/* HubSpot tracking code. Declared after Termly so its autoBlocker is
+            already in place when HubSpot sets its tracking cookies. */}
+        <Script
+          id="hs-script-loader"
+          src="https://js-eu1.hs-scripts.com/26886561.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
